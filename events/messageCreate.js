@@ -1,15 +1,15 @@
 const { Collection, EmbedBuilder } = require("discord.js");
 const { prefix } = require('../settings/config.json')
 const client = require("../index");
+let color = '0x2F3136';
 
 client.on("messageCreate", async (message) => {
   const nopermsyou = new EmbedBuilder()
-  .setColor("RANDOM")
+  .setColor(color)
   .setDescription(`**ADVERTENCIA**\nNo **tienes** permisos suficientes.`)
   const noperms = new EmbedBuilder()
-  .setColor("RANDOM")
+  .setColor(color)
   .setDescription(`**¡ERROR!**\nNo **tengo** permisos suficientes.`)
-  let g = new dba.crearDB({ nombre: message.guild.id, carpeta: 'guilds' })
   if (message.author.bot || !message.guild) return;
   if(!message.content.startsWith(prefix)) return;
   let args = message.content.slice(prefix.length).trim().split(/ +/);

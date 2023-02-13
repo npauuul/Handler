@@ -1,6 +1,6 @@
 const { PermissionFlagsBits} = require("discord.js");
 module.exports = {
-  name: "test",
+  name: "ping",
   description: "",
   userPermissions: PermissionFlagsBits.Administrator,
   botPermissions: PermissionFlagsBits.SendMessages,

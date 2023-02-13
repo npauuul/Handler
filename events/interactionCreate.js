@@ -1,13 +1,14 @@
 const { InteractionType, EmbedBuilder } = require("discord.js");
 const client = require("../index");
+let color = '0x2F3136';
 
 client.on("interactionCreate", async (interaction) => {
   if (interaction.type == InteractionType.ApplicationCommand) {
     const nopermsyou = new EmbedBuilder()
-      .setColor("RANDOM")
+      .setColor(color)
       .setDescription(`**ADVERTENCIA**\nNo **tienes** permisos suficientes.`)
     const noperms = new EmbedBuilder()
-      .setColor("RANDOM")
+    .setColor(color)
       .setDescription(`**¡ERROR!**\nNo **tengo** permisos suficientes.`)
     // code
     const command = client.scommands.get(interaction.commandName);

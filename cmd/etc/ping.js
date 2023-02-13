@@ -2,7 +2,7 @@ const { CommandInteraction, ApplicationCommandType, PermissionFlagsBits, Client,
 let color = '0x2F3136';
 module.exports = {
   name: "ping",
-  description: 'Visualiza el avatar de un usuario o el tuyo.',
+  description: 'comando básico ping',
   userPermissions: PermissionFlagsBits.SendMessages,
   botPermissions: PermissionFlagsBits.EmbedLinks,
   category: "etc",
